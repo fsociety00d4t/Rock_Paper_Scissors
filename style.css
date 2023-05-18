@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*eslint-env es6*/
+body {
+  background-color:#66347F;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+
+/*p {
+  text-align: left;
+  padding: 0 20px;
+} 
+*/
+
+h1 {
+    color:#6CE8E4;
+    width:50%;
+    padding:20px;
+  //  margin-top:30px;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Libre, monospace, sans-serif; 
+    font-size: 3em;
+    letter-spacing: 3px;
+    border-color: azure;
+    border-style: dotted;
+    text-align: center;
+        
+    
+}
+#btns {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:100px;
+    margin-bottom: 50px;;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+.btn {
+    width:350px;
+    height:250px;
+    border-radius: 100px;
+    font-size:0;
+    
+}
+
+.rock {
+    background-image: url(rock.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.paper {
+    background-image: url(paper.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.scissors {
+ background-image: url(scissors.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:left;
+}
+
+.chose {
+    font-family:fantasy, sans-serif;
+    color:#4E66DA; 
+    text-align: center;
+}
+
+.itsOver {
+    text-align: center;
+    font-size:30px;
+    font-weight: bold; 
+}
+
+
+.btn:hover {
+    border: dashed 5px #DBD323;
+    cursor: pointer;
+}
+
+.scoreAll {
+    position:absolute; 
+    top:0%; 
+    font-family:monospace; 
+    font-size: 25px;
+    
+}
+
+#restart {
+    display:none; 
+    position: absolute; 
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+   // top:30%;
+  //  left: 40%;
+    height: 500px;
+    width:500px;
+    background-color: #353533; 
+    border-radius: 20px;
+} 
+
+.startOver {
+    color:white;
+   // position:absolute; 
+    font-family: monospace, sans-serif;
+    font-size:30px;;
+    text-align: center; 
+    top:30%;
+    right:5%;
+    margin-top: 200px;
+    
+}
+
+.rstBtns  {
+    padding:20px;
+    border-radius:10px; 
+    margin:50px;
+    width:20%;
+    height:15%;
+    margin-top:100px;
+    margin-left:80px; 
+}
+
+.rstBtns:hover {
+    background-color:#E36522;
+    cursor: pointer;
+}

@@ -4,117 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <h1> Rock - Papper - Scissors </h1>
+    
+    <div id="btns">
+    <button class="btn rock">rock</button>
+    <button class="btn paper">paper</button>
+    <button class="btn scissors">scissors</button>
+       </div>
+    
+    <p class="msg chose"></p>
+    <p class="msg2 chose"></p>
+    <p class="Current_Round chose"></p>
+    <p class="score chose"></p>
+    <p class="itsOver"></p>
+    <div id=restart>
+    <p class="startOver"></p>
+        </div>
+    <p class="scoreAll"></p>
         
-        function getComputerChoice() {
-            let choices=["rock","paper","scissors"];
-            let choice = Math.floor(Math.random()*choices.length);
-             return choices[choice];
-        }
 
 
-        function playerSelection() {
-            let playerChoice = prompt("Enter your choice").toLowerCase();
-            return playerChoice;
-        }
-
-
-        function playRound(comp,player) {
-          //ret 1=win comp
-          //ret 0=win player
-            if (comp===player)
-            {
-                console.log("It's a Tie");
-            }
-
-            else if (comp==='rock'&& player==='paper') {
-                console.log ("You win, paper beats rock");
-                return 0;
-
-            }
-
-            else if (comp==='rock' && player==='scissors') 
-            {
-                console.log('You lose, rock beats scissors');
-                return 1;
-            }
-
-            else if (comp==='paper' && player ==='rock')
-            {
-                console.log('You lose, paper beats rock');
-                return 1;
-            }
-
-            else if (comp==='paper' && player === 'scissors') {
-                console.log('You win, scissors beats paper');
-                return 0;
-            }
-
-            else if (comp==='scissors' && player === 'rock') {
-                console.log('You win, rock beats scissors');
-                return 0;
-            }
-
-            else if (comp==='scissors' && player === 'paper') {
-                console.log('You lose, scissors beats paper');
-                return 1;
-            }
-
-            else console.log('You put wrong input, go again!');
-
-
-        }
-
-
-        function game() {
-            let playerCount=0, CompCount=0, res;
-            let player, comp;
-            for(let i=0;i<5;i++) {
-                player =playerSelection();
-                comp = getComputerChoice();
-                res=playRound(comp,player);
-                if (res===1) {
-                    CompCount+=1;
-            }
-                else if (res===0) {
-                    playerCount+=1;
-            }
-
-            else 
-            {
-                i--;
-            }
-            console.log(("player score is: "+ playerCount +" comp score is: " + CompCount));
-
-            if (playerCount===CompCount && playerCount>=2 && CompCount>=2)
-            {
-                console.log("That's a close one!");
-            } 
-
-            }       
-            
-            if (playerCount>CompCount)
-            console.log ("You WON with a score of: " + playerCount + " to " + CompCount);
-            if (CompCount>playerCount)
-            console.log ("You LOST with a score of: " + playerCount + " to " + CompCount);
-
-            let again = prompt("Do you want to Restart?").toLowerCase();
-            console.log(again);
-            if (again==='yes') {
-                game();
-
-            }
-            else return;
- 
-        }
-   
-            console.log(game());
-
-    </script>
-
-
+  
 </body>
 </html>
